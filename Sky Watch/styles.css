@@ -1,0 +1,282 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Links and Buttons */
+a {
+    text-decoration: none;
+    color: #00f2fe;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4facfe;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background:#fcd34d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #4facfe;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Distributes space between items */
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #fcd34d;
+}
+
+.navbar .weather-link {
+    margin-right: auto; /* Pushes the Weather link to the leftmost */
+}
+
+.navbar .auth-links {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* Header Styles (Weather Page) */
+.header {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1em;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Weather Section */
+.main-weather {
+    text-align: center;
+    padding: 50px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.temperature {
+    font-size: 5em;
+    margin: 0;
+    font-weight: bold;
+}
+
+.condition {
+    font-size: 1.5em;
+    margin: 10px 0;
+    font-weight: 300;
+}
+
+.date {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Hourly Forecast */
+.hourly-forecast {
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.hourly-forecast h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.hourly-cards {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.hour-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    flex: 0 0 auto;
+    width: 80px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s ease-in-out;
+}
+
+.hour-card:hover {
+    transform: translateY(-5px);
+}
+
+.hour-card img {
+    width: 40px;
+    margin: 10px 0;
+}
+
+.hour-card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* Weekly Forecast */
+.weekly-forecast {
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.weekly-forecast h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.weekly-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.day-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s ease-in-out;
+}
+
+.day-card:hover {
+    transform: translateY(-5px);
+}
+
+.day-card img {
+    width: 40px;
+}
+
+.day-card p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Form Container (Login & Sign-Up Pages) */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+}
+
+.form-container h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1em;
+    outline: none;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.redirect-text {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.redirect-text a {
+    color: #070abd;
+    text-decoration: none;
+}
+
+.redirect-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .temperature {
+        font-size: 3.5em;
+    }
+
+    .hour-card {
+        width: 70px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+}
