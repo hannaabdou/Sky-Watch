@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Watch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="weather-link">Weather</a> <!-- Leftmost link -->
+        <div class="auth-links">
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </nav>    
+
+    <!-- Full Page Weather App -->
+    <header class="header">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search for a country or city....." class="search-bar" />
+            <button id="clear-search" class="clear-btn" style="display: none;">&times;</button>
+        </div>
+    </header>
+
+    <main class="main-weather">
+        <div class="current-weather">
+            <h3>📍Current Location : Ismailia, Egypt</h3>
+            <h1 class="temperature">24°C</h1>
+            <p class="condition">Sunny</p>
+            <p class="date">Monday, November 27</p>
+        </div>
+    </main>
+
+    <section class="hourly-forecast">
+        <h2>Hourly Forecast</h2>
+        <div class="hourly-cards">
+            <div class="hour-card">
+                <p>10 AM</p>
+                <img src="sun-icon.png" alt="Sunny">
+                <p>24°C</p>
+            </div>
+            <div class="hour-card">
+                <p>11 AM</p>
+                <img src="cloud-icon.png" alt="Cloudy">
+                <p>22°C</p>
+            </div>
+            <div class="hour-card">
+                <p>12 PM</p>
+                <img src="rain-icon.png" alt="Rainy">
+                <p>20°C</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="weekly-forecast">
+        <h2>Weekly Forecast</h2>
+        <div class="weekly-cards">
+            <div class="day-card">
+                <p>Monday</p>
+                <img src="sun-icon.png" alt="Sunny">
+                <p>24°C</p>
+            </div>
+            <div class="day-card">
+                <p>Tuesday</p>
+                <img src="cloud-icon.png" alt="Cloudy">
+                <p>22°C</p>
+            </div>
+            <div class="day-card">
+                <p>Wednesday</p>
+                <img src="rain-icon.png" alt="Rainy">
+                <p>19°C</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
