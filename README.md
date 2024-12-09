@@ -4,5 +4,5 @@ A sleek and user-friendly weather website that provides real-time weather update
 1. Hanna Abdou: HTML & CSS
 2. Mariam Elsherif: Python & API 
 3. Doha Ismail: UML Diagrams using markdown
-4. Rowan Elsadat
+4. Rowan Ali Elsadat : Documentation using markdown
 5. Mariam Tarek
