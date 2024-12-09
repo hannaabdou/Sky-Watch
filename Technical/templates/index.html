@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Watch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="weather-link">Weather</a> 
+        <div class="auth-links">
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('signup') }}">Sign Up</a>
+        </div>
+    </nav>    
+
+    
+
+    <header class="header">
+        <form method="POST" action="/">
+            <div class="search-container">
+                <input type="text" name="city" id="search" placeholder="Search for a country or city..." class="search-bar">
+                <button type="submit" class="search-btn">Search</button>
+            </div>
+        </form>
+    </header>
+
+    <main class="main-weather">
+        {% if current_weather %}
+        <div class="current-weather">
+            <h3>📍 Current Location: {{ current_weather.city }}</h3>
+            <h1 class="temperature">{{ current_weather.temp }}°C</h1>
+            <p class="condition">{{ current_weather.description }}</p>
+            <img src="{{ url_for('static', filename='images/' + current_weather.icon + '.png') }}" 
+             alt="{{ current_weather.description }}">
+        </div>
+        {% else %}
+        <p>Weather data is unavailable. Please try again.</p>
+        {% endif %}
+    </main>
+
+    <section class="hourly-forecast">
+        <h2>Hourly Forecast</h2>
+        <div class="hourly-cards">
+            {% if hourly_forecast %}
+                {% for hour in hourly_forecast %}
+                <div class="hour-card">
+                    <p>{{ hour.time }}</p>
+                    <img src="{{ url_for('static', filename='images/' + hour.icon + '.png') }}"  alt="{{ hour.description }}">
+                    <p>{{ hour.temp }}°C</p>
+                    <p>{{ hour.description }}</p>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p>No hourly forecast data available.</p>
+            {% endif %}
+        </div>
+    </section>
+
+    <section class="weekly-forecast">
+        <h2>Weekly Forecast</h2>
+        <div class="weekly-cards">
+            {% if weekly_forecast %}
+                {% for day in weekly_forecast %}
+                    <div class="day-card">
+                        <p>{{ day.date }}</p>
+                        <img src="{{ url_for('static', filename='images/' + day.icon + '.png') }}" alt="{{ day.description }}">
+                        <p>Avg: {{ day.avg_temp }}°C</p>
+                        <p>{{ day.description }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No weekly forecast data available.</p>
+            {% endif %}
+        </div>
+    </section>
+</body>
+</html>
