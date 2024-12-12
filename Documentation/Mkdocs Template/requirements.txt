@@ -1,0 +1,5 @@
+mkdocs-material
+mkdocs-blogging-plugin
+mkdocs-material-extensions
+mkdocs-glightbox
+mkdocs-rss-plugin
