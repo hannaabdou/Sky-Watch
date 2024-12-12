@@ -1,0 +1,155 @@
+site_name: SkyWatch
+docs_dir: docs
+site_url: https://SkyWatch.org
+repo_url: https://github.com/MyGitHub-Username/mkdocs-website
+repo_name: mkdocs-website
+
+
+# Change this to add/remove more tabs
+nav:
+  - Home: index.md
+  - About: 
+    - 'introduction': about.md
+  - usage:
+    - 'How the System Works': coding/useSystem.md
+    - 'How Users Can Use It': coding/usersUse.md
+  - structure:
+    - 'UML': coding/UML.md
+    - 'Interface': coding/interface.md
+  - Tags: tags.md
+
+
+theme:
+  name: material
+  language: en
+  direction: ltr
+  favicon: assets/logo.ico
+  logo: assets/logomk.jpeg
+  custom_dir: overrides
+  font:
+    text: "Roboto"
+    code: "JetBrains Mono"
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: indigo
+      toggle: 
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - header.autohide
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.share
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.footnote.tooltips
+    - toc.follow
+    #- toc.integrate
+
+
+plugins:
+  - search
+  - glightbox
+  - rss
+  - mermaid2
+   
+  - tags:
+      tags_file: tags.md
+  - blog:
+      post_dir: "{blog}/posts"
+      authors_file: "{blog}/.authors.yml"
+      pagination: true
+  - rss:
+      match_path: "blog/posts/.*"
+      date_from_meta:
+        as_creation: date.created
+        as_update: date.updated
+
+
+extra:
+  consent:
+      title: Cookie consent
+      description: >- 
+        We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.
+  social:
+    - icon: material/github
+      link: https://github.com/hannaabdou/Sky-Watch
+    
+    - icon: material/linkedin
+      link: https://www.linkedin.com/in/rowan-elsadat-076a8b277/
+    
+    - icon: material/email-outline
+      link: mailto:<esadatrowan@gmail.com>
+
+
+hooks:
+  - hooks/socialmedia.py
+
+
+extra_css:
+  - stylesheets/extra.css
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css
+
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - footnotes
+  - admonition
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: ¶
+  - pymdownx.blocks.caption
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+copyright: "Copyright &copy; Rowan Elsadat | SkyWatch"
