@@ -7,4 +7,4 @@ This project is built using [MkDocs with the Material theme](https://squidfunk.g
 ---
 
 
-👨‍💻 Made with by [Rowan Elsadat](https://github.com/rowanelsadat)
+👨‍💻 Made by [Rowan Elsadat](https://github.com/rowanelsadat)
