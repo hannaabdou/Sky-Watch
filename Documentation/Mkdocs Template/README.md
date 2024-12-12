@@ -111,4 +111,4 @@ Ensure you have Python 3.10+ installed:
 
 ---
 
-👨‍💻 Made with ❤️ by [Mohamed Gamal](https://github.com/Mohammed-Gamal)
+👨‍💻 Made with by [Rowan Elsadat](https://github.com/rowanelsadat)
