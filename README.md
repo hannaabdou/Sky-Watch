@@ -5,4 +5,4 @@ A sleek and user-friendly weather website that provides real-time weather update
 2. Mariam Elsherif: Python & API 
 3. Doha Ismail: UML Diagrams using markdown
 4. Rowan Ali Elsadat : Documentation using markdown
-5. Mariam Tarek
+5. Mariam Tarek : JavaScript Animation
